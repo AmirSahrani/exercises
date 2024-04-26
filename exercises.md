@@ -1,69 +1,4 @@
-# implement functional programming concpets
-
-## Map (SP1)
-
-Your goal is to implment the map funtion, it should take in a function and a
-list, and return a new list, each element of which is the result of applying the
-function on the corresponding element of the original list.
-
-```python
->>> map(math.sqrt, [1, 4, 9, 16, 25])
-[1.0, 2.0, 3.0, 4.0, 5.0]
-```
-
-```python
->>> map(int, [1.0, 2.0, 3.0, 4.0, 5.0])
-[1, 2, 3, 4, 5]
-```
-
-```python >>> map(lambda x: x * 2, [1, 2, 3, 4, 5])
-[2, 4, 6, 8, 10]
-```
-
-## Filter (SP1)
-
-Your goal is to implement the filter function, it should take in a function and
-a list, and return a new list, each element of which is the result of applying
-the function on the corresponding element of the original list.
-
-```python
->>> filter(string.isdigit, ['a', '1', 'b', '2', 'c', '3'])
-['1', '2', '3']
-```
-
-```python
->>> filter(lambda x: x > 2, [1, 2, 3, 4, 5])
-[3, 4, 5]
-```
-
-## Partial (SP2)
-
-> Probably really hard, not for exam in its current state Maybe this can be made
-> easier by providing a template for the partial function
-
-Your goal is to implement the partial function, it should take in a function and
-a list of arguments, and return a new function that takes in the remaining
-arguments.
-
-```python
->>> def add(a, b):
-...     return a
->>> add_5 = partial(add, 5)
->>> add_5(3)
-8
-```
-
-```python
->>> def power(base, exponent):
-...     return base ** exponent
->>> square = partial(power, 2)
->>> square(3)
-9
-```
-
-
-
-# Caclulus
+# Calculus
 
 ## Derivatives (SP1)
 
@@ -89,6 +24,44 @@ default value for h. Note that rounding might be different on your system.
 >>> derivative(f, 2, h=1e-7)
 4.000000091153311
 ```
+
+## Polynomials
+Polynomials are functions of the form
+$$
+f(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0
+$$
+An example could be 
+$$
+f(x) = 2x^2 + 3x + 1
+$$
+
+Your goal is to implement a function that takes in a list of coefficients, and return a new function that represents the polynomial. Lets take three function as an example
+$$
+f(x) = x^2
+$$
+
+$$
+g(x) = 2x + 1
+$$
+
+$$
+h(x) = 2x^4 + 3x^3 + x + 1
+$$
+
+The function you write should be able to take in the coefficients of these functions and return a new function that represents the sum of these functions. Like this:
+
+```python
+>>> f = polynomial([0, 0, 1])
+>>> g = polynomial([1, 2])
+>>> h = polynomial([1, 1, 0, 3, 2])
+>>> f(2)
+4
+>>> g(2)
+5
+>>> h(2)
+57
+```
+
 
 # List usage
 
@@ -164,4 +137,20 @@ ID. If the ID is not found, return None.
 >>> get_user_data(data, 9)
 None
 ```
+
+# Strings
+## SpOnGeBoB cAsE
+Spongebob case is a way of writing that got popular on the internet, it simply means that you write a string with alternating capital and lower case letters. Your job is to implement a function that takes in a string and returns it in spongebob case. Since this is an informal way of writing, we might as well drop any punctuation.
+
+```python
+>>> spongebob_case('hello')
+'hElLo'
+>>> spongebob_case('world')
+'wOrLd'
+>>> spongebob_case('hello, world!')
+'hElLo wOrLd'
+```
+
+
+
 
