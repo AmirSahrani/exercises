@@ -68,7 +68,7 @@ arguments.
 ## Derivatives (SP1)
 
 A derivative of a function give the slope of a function at a certain point, let's say you have a function with the distance traveled by a car, if you want to know exactly how fast that car is traveling at a certain point, you would want the slope of the function and that point. 
-![Derivative animation](derivative_animation.gif)
+![Derivative animation](figures/derivative_animation.gif)
 
 This derivate can be estimated with the following equation (note $$f'(x)$$ is the
 derivative of $$f(x)$$:

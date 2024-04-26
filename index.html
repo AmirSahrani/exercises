@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to a Markdown CSS theme -->
+    <link href="/style/markdown.css" rel="stylesheet"></link>
+</head>
+<body>
+    <div id="content"></div>
+
+    <script>
+        // Load the HTML content from `body.html` into the `#content` div
+        fetch('body.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('content').innerHTML = html;
+            })
+            .catch(err => console.error('Failed to load page content: ', err));
+    </script>
+</body>
+</html>
