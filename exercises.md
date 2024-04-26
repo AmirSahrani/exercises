@@ -36,6 +36,7 @@ f(x) = 2x^2 + 3x + 1
 $$
 
 Your goal is to implement a function that takes in a list of coefficients, and return a new function that represents the polynomial. Lets take three function as an example
+
 $$
 f(x) = x^2
 $$
@@ -116,8 +117,8 @@ contains a list of their favorite numbers.
 | ------------ | ---- | ---------- | ---------------- |
 | **1**        | Paul | 'black'    | [0,3,4]          |
 | **2**        | Anna | 'gray'     | [9,7,1]          |
-| **2**        | Tom  | 'red'      | [0,3,5]          |
-| **2**        | Mary | 'blonde'   | [5,4]            |
+| **3**        | Tom  | 'red'      | [0,3,5]          |
+| **4**        | Mary | 'blonde'   | [5,4]            |
 
 Write a function that can take this data and an ID, and returns their hair color
 and the favorite number (the first element in the list) of the person with that
