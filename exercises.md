@@ -27,10 +27,13 @@ default value for h. Note that rounding might be different on your system.
 
 ## Polynomials
 Polynomials are functions of the form
+
 $$
 f(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0
 $$
+
 An example could be 
+
 $$
 f(x) = 2x^2 + 3x + 1
 $$
