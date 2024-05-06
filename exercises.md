@@ -155,6 +155,26 @@ Spongebob case is a way of writing that got popular on the internet, it simply m
 'hElLo wOrLd'
 ```
 
+## snake_case
+Snake case is a way of writing that is often used in programming, it is a way of writing where you write all words in lower case, and separate them with an underscore. Your job is to implement a function that takes in a string and returns it in snake case. Since this is an informal way of writing, we might as well drop any punctuation.
+
+```python
+>>> snake_case('hello')
+'hello'
+>>> snake_case('Hello, !World')
+'hello_world'
+```
+
+## camelCase
+Camel case is a way of writing that is often used in programming, it is a way of writing where you write all words in lower case, except the first letter of each word after the first word, which is written in upper case. Your job is to implement a function that takes in a string and returns it in camel case. Since this is an informal way of writing, we might as well drop any punctuation.
+
+```python
+>>> camel_case('hello')
+'hello'
+>>> camel_case('Hello, !World')
+'helloWorld'
+```
+
 
 
 
