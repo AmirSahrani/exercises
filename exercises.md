@@ -2,7 +2,10 @@
 
 ## Derivatives (SP1)
 
-A derivative of a function give the slope of a function at a certain point, let's say you have a function with the distance traveled by a car, if you want to know exactly how fast that car is traveling at a certain point, you would want the slope of the function and that point. 
+A derivative of a function give the slope of a function at a certain point,
+let's say you have a function with the distance traveled by a car, if you want
+to know exactly how fast that car is traveling at a certain point, you would
+want the slope of the function and that point.
 ![Derivative animation](figures/derivative_animation.gif)
 
 This derivate can be estimated with the following equation (note $f'(x)$ is the
@@ -26,33 +29,28 @@ default value for h. Note that rounding might be different on your system.
 ```
 
 ## Polynomials
+
 Polynomials are functions of the form
 
-$$
-f(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0
-$$
+$$ f(x) = a*n x^n + a*{n-1} x^{n-1} + \ldots + a_1 x + a_0 $$
 
-An example could be 
+An example could be
 
-$$
-f(x) = 2x^2 + 3x + 1
-$$
+$$ f(x) = 2x^2 + 3x + 1 $$
 
-Your goal is to implement a function that takes in a list of coefficients, and return a new function that represents the polynomial. Lets take three function as an example
+Your goal is to implement a function that takes in a list of coefficients, and
+return a new function that represents the polynomial. Lets take three function
+as an example
 
-$$
-f(x) = x^2
-$$
+$$ f(x) = x^2 $$
 
-$$
-g(x) = 2x + 1
-$$
+$$ g(x) = 2x + 1 $$
 
-$$
-h(x) = 2x^4 + 3x^3 + x + 1
-$$
+$$ h(x) = 2x^4 + 3x^3 + x + 1 $$
 
-The function you write should be able to take in the coefficients of these functions and return a new function that represents the sum of these functions. Like this:
+The function you write should be able to take in the coefficients of these
+functions and return a new function that represents the sum of these functions.
+Like this:
 
 ```python
 >>> f = polynomial([0, 0, 1])
@@ -65,7 +63,6 @@ The function you write should be able to take in the coefficients of these funct
 >>> h(2)
 57
 ```
-
 
 # List usage
 
@@ -81,11 +78,11 @@ the stride. For example:
 ```
 
 Your job is to implement a function that can do the exact same as the stride
-parameter, without using the parameter. Note that you should therefore also be able to take
-in negative values.
+parameter, without using the parameter. Note that you should therefore also be
+able to take in negative values.
 
 ```python
->>> x = [1,2,3,4] 
+>>> x = [1,2,3,4]
 >>> stride(x, -2)
 [4,2]
 ```
@@ -116,12 +113,12 @@ lists, each containg some data, the first element in each list contains the name
 of the person, the second element contains their hair color, and the last
 contains a list of their favorite numbers.
 
-| users \ data | Name | Hair Color | Favorite numbers |
-| ------------ | ---- | ---------- | ---------------- |
-| **1**        | Paul | 'black'    | [0,3,4]          |
-| **2**        | Anna | 'gray'     | [9,7,1]          |
-| **3**        | Tom  | 'red'      | [0,3,5]          |
-| **4**        | Mary | 'blonde'   | [5,4]            |
+| users | Name | Hair Color | Favorite numbers |
+| ----- | ---- | ---------- | ---------------- |
+| **1** | Paul | 'black'    | [0,3,4]          |
+| **2** | Anna | 'gray'     | [9,7,1]          |
+| **3** | Tom  | 'red'      | [0,3,5]          |
+| **4** | Mary | 'blonde'   | [5,4]            |
 
 Write a function that can take this data and an ID, and returns their hair color
 and the favorite number (the first element in the list) of the person with that
@@ -142,9 +139,42 @@ ID. If the ID is not found, return None.
 None
 ```
 
+## Banking information
+
+In this exercise you are going to implement a function that takes in a list of
+client information for a bank. The list contains the name of the client, their
+account number, their balance, and a list of transactions. Your job is to
+implement a function that takes in this data, and verifies that the balance is
+correct. If the balance is not correct, you should return the name of the
+client, and the amount discrepancy, else you should return 0.
+
+| Name | Account number | balance | transactions     |
+| ---- | -------------- | ------- | ---------------- |
+| Paul | 2351           | 208.00  | [210, 2,-4]      |
+| Anna | 1935           | -32.30  | [-60, 30, -2.30] |
+| Tom  | 2986           | 27.81   | [27, 0.01, 3]    |
+| Mary | 4359           | 314.15  | [30, 290, -5.85] |
+
+```python
+>>> data = [
+...     ['Paul', 2351, 208.00, [210, 2, -4]],
+...     ['Anna', 1935, -32.30, [-60, 30, -2.30]],
+...     ['Tom', 2986, 27.81,   [27, 0.01, 3]],
+...     ['Mary', 4359, 314.15, [30, 290, -5.85]]
+... ]
+>>> verify_balance(data)
+('Tom', 2.2)
+```
+
 # Strings
+
 ## SpOnGeBoB cAsE
-Spongebob case is a way of writing that got popular on the internet, it simply means that you write a string with alternating capital and lower case letters. Your job is to implement a function that takes in a string and returns it in spongebob case. Since this is an informal way of writing, we might as well drop any punctuation.
+
+Spongebob case is a way of writing that got popular on the internet, it simply
+means that you write a string with alternating capital and lower case letters.
+Your job is to implement a function that takes in a string and returns it in
+spongebob case. Since this is an informal way of writing, we might as well drop
+any punctuation.
 
 ```python
 >>> spongebob_case('hello')
@@ -156,7 +186,12 @@ Spongebob case is a way of writing that got popular on the internet, it simply m
 ```
 
 ## snake_case
-Snake case is a way of writing that is often used in programming, it is a way of writing where you write all words in lower case, and separate them with an underscore. Your job is to implement a function that takes in a string and returns it in snake case. Since this is an informal way of writing, we might as well drop any punctuation.
+
+Snake case is a way of writing that is often used in programming, it is a way of
+writing where you write all words in lower case, and separate them with an
+underscore. Your job is to implement a function that takes in a string and
+returns it in snake case. Since this is an informal way of writing, we might as
+well drop any punctuation.
 
 ```python
 >>> snake_case('hello')
@@ -166,7 +201,12 @@ Snake case is a way of writing that is often used in programming, it is a way of
 ```
 
 ## camelCase
-Camel case is a way of writing that is often used in programming, it is a way of writing where you write all words in lower case, except the first letter of each word after the first word, which is written in upper case. Your job is to implement a function that takes in a string and returns it in camel case. Since this is an informal way of writing, we might as well drop any punctuation.
+
+Camel case is a way of writing that is often used in programming, it is a way of
+writing where you write all words in lower case, except the first letter of each
+word after the first word, which is written in upper case. Your job is to
+implement a function that takes in a string and returns it in camel case. Since
+this is an informal way of writing, we might as well drop any punctuation.
 
 ```python
 >>> camel_case('hello')
@@ -175,6 +215,20 @@ Camel case is a way of writing that is often used in programming, it is a way of
 'helloWorld'
 ```
 
+## Listed
 
+You are trying to enter some data into your program, however for some reason
+your data comes in the form of strings, and you need to convert them to a list.
+Your job is to implement a function that takes in a string, and returns a list
+of the elements in the string. The string will be formatted as follows:
 
+- The string will start with a `[` and end with a `]`
+- The elements will be separated by a `,`
+- All elements will be floats
 
+```python
+>>> listed('[1.0,2.0,3.0]')
+[1.0, 2.0, 3.0]
+>>> listed('[[1.0,2.0],[,3.0,4.0]]') ## Optional
+[[1.0, 2.0], [3.0, 4.0]]
+```
