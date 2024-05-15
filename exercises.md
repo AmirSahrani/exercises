@@ -2,16 +2,26 @@
 
 ## Derivatives (SP1)
 
-A derivative of a function give the slope of a function at a certain point,
-let's say you have a function with the distance traveled by a car, if you want
-to know exactly how fast that car is traveling at a certain point, you would
-want the slope of the function and that point.
+A derivative of a function give the slope of a function at a certain point.
+Let's say you have a function showing the distance traveled by a car, intuitively if we 
+want to know how fast we are moving at a certain point, we can look at how much distance we have 
+traveled in a relatively short time, let's say 1 second. Then our speed at that point is the distance 
+we traveled in 1 second. If we make the time interval shorter and shorter, we get a better and better
+estimate. There are analytical way of solving this, but for now we will use a numerical method to
+estimate these derivatives.
+
+If you are interested [here](https://calculusmadeeasy.org/) is a nice resource on derivatives and other calculus topics
+
 ![Derivative animation](figures/derivative_animation.gif)
 
 This derivate can be estimated with the following equation (note $f'(x)$ is the
 derivative of $f(x)$:
 
 $$ f'(x) \approx \frac{f(x + h) - f(x)}{h} $$
+
+Here we can see the idea of taking a small step $h$ (which could be a short time step) and looking at the 
+change in the function value (such as distance), and if we then divide this by the step size, 
+we get an estimate of the slope of the function at that point.
 
 Your goal is to implement a function that takes in a function, and a value, and
 returns the derivative of the function at that value. use `h=0.0001` as the
